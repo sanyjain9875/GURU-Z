@@ -772,7 +772,7 @@ header {
 .right-box {
     grid-column: 3 / 4;
     grid-row: 2 / 3; 
-    margin-left: 180px; 
+    margin-left: 170px; 
 }
 
 .course-box iframe {
