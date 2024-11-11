@@ -608,16 +608,18 @@ header {
     color: white;
 }
 
+/* Flex Container Styling */
 .about-flex-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 250px;
+    gap: 50px; /* Smaller gap for better responsiveness */
     padding: 20px;
+    flex-wrap: wrap; /* Allows boxes to wrap on smaller screens */
     background-color: black;
 }
 
-
+/* Box Styling */
 .about-box {
     background-color: #007bff;
     color: white;
@@ -626,11 +628,63 @@ header {
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 10px; /* Adds spacing between boxes on smaller screens */
 }
 
 .about-box img {
     width: 40px;
     margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-title {
+        font-size: 1.8em;
+    }
+
+    .about-flex-container {
+        gap: 30px;
+        padding: 15px;
+    }
+    
+    .about-box {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 1.5em;
+        margin-top: 30px;
+    }
+
+    .about-flex-container {
+        gap: 20px;
+    }
+
+    .about-box {
+        width: 100%; /* Full-width for boxes on smaller screens */
+        max-width: 400px; /* Optional max width for readability */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title {
+        font-size: 1.3em;
+    }
+
+    .about-flex-container {
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .about-box {
+        width: 90%; /* Almost full width on very small screens */
+    }
+
+    .about-box img {
+        width: 35px; /* Smaller icon size for smaller screens */
+    }
 }
 
 .contact-section {
@@ -697,6 +751,7 @@ header {
     align-items: center;
     text-align: center;
     margin-top: 40px;
+    padding: 0 10px; /* Padding for better alignment on smaller screens */
 }
 
 .video-container {
@@ -715,6 +770,7 @@ header {
     max-width: 940px;
     width: 100%;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    margin: 10px; /* Adds spacing on smaller screens */
 }
 
 .video-box h2 {
@@ -729,6 +785,54 @@ header {
     border-radius: 10px;
     border: none;
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .video-box {
+        max-width: 700px;
+        padding: 15px;
+    }
+
+    .video-box h2 {
+        font-size: 22px;
+    }
+
+    #video-frame {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-box {
+        max-width: 500px;
+        padding: 15px;
+        overflow: hidden;
+    }
+
+    .video-box h2 {
+        font-size: 20px;
+    }
+
+    #video-frame {
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-box {
+        max-width: 90%; /* Full width with some margin on smaller screens */
+        padding: 10px;
+    }
+
+    .video-box h2 {
+        font-size: 18px;
+    }
+
+    #video-frame {
+        height: 200px;
+    }
+}
+
 
 .course-container {
     text-align: center;
@@ -799,3 +903,4 @@ header {
         display: none;                   
     }
 }
+
